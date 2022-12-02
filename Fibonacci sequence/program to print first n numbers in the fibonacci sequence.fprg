@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="SHAKILA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:28:43 PM"/>
+        <attribute name="created" value="U0hBS0lMQTtMQVBUT1AtOEJORktMRDk7MjAyMi0xMi0wMjswODo0Nzo0MCBQTTsyODQy"/>
+        <attribute name="edited" value="U0hBS0lMQTtMQVBUT1AtOEJORktMRDk7MjAyMi0xMi0wMjsxMDoyODo0MyBQTTszOzI5NDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="program to print first n numbers in the fibonacci sequence"/>
+            <comment text="Declaring variable,1 to run loop and 2 to create sequence"/>
+            <declare name="num1, num2, count" type="Integer" array="False" size=""/>
+            <comment text="Getting the loop count from user"/>
+            <output expression="&quot;Enter the number of numbers you want&quot;" newline="True"/>
+            <input variable="count"/>
+            <comment text="Assigning base values"/>
+            <assign variable="num1" expression="1"/>
+            <assign variable="num2" expression="1"/>
+            <comment text="printing first ,initial value"/>
+            <output expression="&quot;num1&quot;" newline="True"/>
+            <while expression="count&gt;1">
+                <output expression="&quot;num2&quot;" newline="True"/>
+                <comment text="changing numbers as per sequence"/>
+                <assign variable="num2" expression="num1+num2"/>
+                <assign variable="num1" expression="num2-num1"/>
+                <comment text="Decrementing count variable to keep loop finite and give required result"/>
+                <assign variable="count" expression="count-1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
